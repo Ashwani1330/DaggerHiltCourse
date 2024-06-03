@@ -1,5 +1,6 @@
 package com.plcoding.daggerhiltcourse
 
+import android.app.Application
 import androidx.lifecycle.ViewModel
 import com.plcoding.daggerhiltcourse.domain.repository.MyRepository
 import dagger.Lazy
@@ -8,10 +9,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MyViewModel @Inject constructor(
-    private val repository: Lazy<MyRepository>
-): ViewModel() {
+    private val repository: MyRepository,
+) : ViewModel() {
 
-    init {
-        repository.get()
-    }
 }
