@@ -7,7 +7,7 @@ import com.plcoding.daggerhiltcourse.domain.repository.MyRepository
 import hilt_aggregated_deps._dagger_hilt_android_internal_modules_ApplicationContextModule
 import javax.inject.Inject
 
-class MyRepositoryImpl(
+class MyRepositoryImpl @Inject constructor(
     private val api: MyApi,
     private val appContext: Application
 ) : MyRepository {
